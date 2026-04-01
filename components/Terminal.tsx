@@ -81,7 +81,7 @@ export default function Terminal() {
 
   return (
     <div
-      className="w-full max-w-3xl mx-auto rounded-lg border border-gray-700 shadow-2xl shadow-black/50 overflow-hidden"
+      className="w-full rounded-lg border border-gray-700 shadow-2xl shadow-black/50 overflow-hidden"
       onClick={focusInput}
     >
       {/* Title bar */}

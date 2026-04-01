@@ -5,6 +5,33 @@
 }
 
 body {
-  background: #0a0a0a;
+  background: #030712;
   color: #ededed;
+}
+
+/* Floating particles background */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100vh) translateX(20px);
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: float linear infinite;
+  opacity: 0;
 }
