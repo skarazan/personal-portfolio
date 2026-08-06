@@ -69,7 +69,7 @@ export const projects: Project[] = [
       "Render",
     ],
     accent: "#38BDF8",
-    image: "/projects/tutorrev.jpg",
+    image: "/projects/tutorrev-tutorials.jpg",
     links: [
       { label: "Live site", href: "https://www.tutorrev.live" },
       { label: "GitHub", href: "https://github.com/skarazan/TutorRev" },
