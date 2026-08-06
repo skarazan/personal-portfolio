@@ -1,25 +1,22 @@
-import Terminal from "@/components/Terminal";
-import Particles from "@/components/Particles";
+import Nav from "@/components/Nav";
+import Hero from "@/components/Hero";
+import ProjectSection from "@/components/ProjectSection";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import { projects } from "@/lib/projects";
 
 export default function Home() {
   return (
-    <main className="relative flex-1 flex flex-col items-center justify-center p-4 bg-gray-950 overflow-hidden">
-      <Particles />
+    <main id="top" className="relative flex-1">
+      <Nav />
+      <Hero />
 
-      {/* Header */}
-      <div className="relative z-10 text-center mb-6">
-        <h1 className="text-4xl font-bold text-green-400 tracking-tight">
-          Saba Karazanashvili
-        </h1>
-        <p className="text-gray-400 mt-1 text-sm tracking-widest uppercase">
-          Portfolio
-        </p>
-      </div>
+      {projects.map((project, i) => (
+        <ProjectSection key={project.slug} project={project} index={i} />
+      ))}
 
-      {/* Terminal */}
-      <div className="relative z-10 w-full max-w-3xl">
-        <Terminal />
-      </div>
+      <About />
+      <Contact />
     </main>
   );
 }

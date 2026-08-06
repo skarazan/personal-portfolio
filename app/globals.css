@@ -1,37 +1,47 @@
 @import "tailwindcss";
 
 @theme inline {
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* The page background lives on <html> only. If <body> also paints a
+   background it covers the negative-z-index accent glows behind each
+   section, since body's background then stops propagating to the canvas. */
+html {
+  scroll-behavior: smooth;
+  background-color: #000;
+  /* Faint grid so large dark areas still read as a surface. */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
 body {
-  background: #030712;
+  background: transparent;
   color: #ededed;
 }
 
-/* Floating particles background */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-    opacity: 0;
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
   }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-100vh) translateX(20px);
+  100% {
+    transform: translateY(280%);
   }
 }
 
-.particle {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: #22c55e;
-  border-radius: 50%;
-  animation: float linear infinite;
-  opacity: 0;
+.animate-scroll-cue {
+  animation: scroll-cue 2.1s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-scroll-cue {
+    animation: none;
+  }
 }
