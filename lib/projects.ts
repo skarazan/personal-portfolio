@@ -9,6 +9,7 @@ export const projects: Project[] = [
       "Takes a Twitch VOD URL and produces captioned 9:16 clips. The stream is transcribed, an LLM proposes candidate moments from the transcript and chat activity, deterministic checks verify each candidate's timestamps and speaker roles, and accepted clips are rendered with captions. A Next.js dashboard runs the pipeline and edits the results.",
     tech: ["Python", "FFmpeg", "Whisper", "LLM APIs", "Next.js", "Supabase", "Cloudflare R2", "Stripe"],
     accent: "#8B5CF6",
+    image: "/projects/streamclip.jpg",
     context:
       "Manual clipping means scrubbing hours of VOD, and existing auto-clippers cut moments that have no setup or payoff.",
     detail:
@@ -30,12 +31,13 @@ export const projects: Project[] = [
       "A full-stack application where students rate and review online programming tutorials. Spring Boot REST API with JWT and OAuth authentication, MongoDB for storage, React front end. Deployed and publicly reachable.",
     tech: ["Java", "Spring Boot", "MongoDB", "JWT", "OAuth", "React"],
     accent: "#38BDF8",
+    image: "/projects/tutorrev.jpg",
     context:
       "View counts say nothing about whether a tutorial is current, complete, or worth the time it takes.",
     detail:
       "Users authenticate through OAuth or email, post reviews tied to their account, and browse tutorials by rating.",
     links: [
-      { label: "Live site", href: "https://tutorrev.onrender.com" },
+      { label: "Live site", href: "https://www.tutorrev.live" },
       { label: "GitHub", href: "https://github.com/skarazan/TutorRev" },
     ],
     stats: [
@@ -69,6 +71,7 @@ export const projects: Project[] = [
       "A Next.js platform for practice questions and courses, with Google OAuth sign-in, an admin surface for authoring content, and a seeded SAT math course. Prisma over PostgreSQL on Neon, images in Supabase Storage, deployed on Render.",
     tech: ["Next.js", "Prisma", "PostgreSQL", "NextAuth", "Zod", "Render"],
     accent: "#34D399",
+    image: "/projects/questions.jpg",
     context:
       "Built to take real sign-ups, so the security work came before the feature work.",
     detail:

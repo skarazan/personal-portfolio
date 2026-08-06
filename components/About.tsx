@@ -1,11 +1,11 @@
 import Reveal from "./Reveal";
 
 const SKILLS: { group: string; items: string[] }[] = [
-  { group: "Languages", items: ["Java", "Python", "TypeScript", "JavaScript", "SQL"] },
-  { group: "Backend", items: ["Spring Boot", "Node.js", "REST APIs", "JWT", "OAuth", "Prisma"] },
+  { group: "Languages", items: ["Java", "Python", "TypeScript", "JavaScript"] },
+  { group: "Backend", items: ["Spring Boot", "Node.js", "REST APIs", "JWT", "OAuth"] },
   { group: "Frontend", items: ["React", "Next.js", "Tailwind CSS"] },
   { group: "Data", items: ["PostgreSQL", "MongoDB", "Supabase"] },
-  { group: "Infra", items: ["Docker", "GitHub Actions", "Vercel", "Render", "Cloudflare R2", "AWS"] },
+  { group: "Infra", items: ["AWS", "Docker", "GitHub Actions", "Vercel", "Render", "Cloudflare R2"] },
   { group: "Other", items: ["LLM APIs", "FFmpeg", "Chrome Extensions", "Stripe"] },
 ];
 

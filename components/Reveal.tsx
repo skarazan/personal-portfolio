@@ -12,10 +12,10 @@ type RevealProps = {
 };
 
 const OFFSCREEN: Record<NonNullable<RevealProps["from"]>, string> = {
-  up: "translate3d(0, 48px, 0)",
-  left: "translate3d(-48px, 0, 0)",
-  right: "translate3d(48px, 0, 0)",
-  scale: "scale(0.94)",
+  up: "translate3d(0, 28px, 0)",
+  left: "translate3d(-28px, 0, 0)",
+  right: "translate3d(28px, 0, 0)",
+  scale: "scale(0.97)",
 };
 
 export default function Reveal({
@@ -50,7 +50,9 @@ export default function Reveal({
           observer.disconnect();
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+      // Positive bottom margin starts the reveal before the element reaches
+      // the fold, so content is already in place when it scrolls into view.
+      { threshold: 0, rootMargin: "0px 0px 18% 0px" },
     );
 
     observer.observe(el);
@@ -64,9 +66,9 @@ export default function Reveal({
       style={{
         opacity: shown ? 1 : 0,
         transform: shown ? "none" : OFFSCREEN[from],
-        filter: shown ? "none" : "blur(6px)",
+        filter: shown ? "none" : "blur(4px)",
         transition:
-          "opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), transform 900ms cubic-bezier(0.16, 1, 0.3, 1), filter 900ms ease",
+          "opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1), filter 600ms ease",
         transitionDelay: `${delay}ms`,
         willChange: "opacity, transform",
       }}

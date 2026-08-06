@@ -313,12 +313,21 @@ const ART: Record<string, (p: { accent: string }) => React.JSX.Element> = {
 export default function ProjectArt({ project }: { project: Project }) {
   if (project.image) {
     return (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={project.image}
-        alt={`${project.name} screenshot`}
-        className="w-full h-auto rounded-[20px] border border-white/10"
-      />
+      <div className="overflow-hidden rounded-[20px] border border-white/10 bg-[#0B0B0F]">
+        {/* Window chrome, so screenshots and generated art read the same */}
+        <div className="flex items-center gap-2 px-4 py-3">
+          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+          <span className="ml-2 h-3.5 w-36 rounded-full bg-white/[0.07]" />
+        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={project.image}
+          alt={`Screenshot of ${project.name}`}
+          className="block h-auto w-full"
+        />
+      </div>
     );
   }
 

@@ -76,10 +76,10 @@ export default function Hero() {
 
               <dl className="mt-7 space-y-3 text-sm">
                 {[
-                  ["Languages", "Java, Python, TypeScript, JavaScript, SQL"],
-                  ["Backend", "Spring Boot, Node.js, Prisma, REST, OAuth"],
+                  ["Languages", "Java, Python, TypeScript, JavaScript"],
+                  ["Backend", "Spring Boot, Node.js, REST, OAuth"],
                   ["Frontend", "React, Next.js, Tailwind CSS"],
-                  ["Deploys to", "Render, Vercel, GitHub Actions"],
+                  ["Deploys to", "AWS, Render, Vercel, GitHub Actions"],
                 ].map(([label, value]) => (
                   <div key={label} className="flex gap-3">
                     <dt className="w-24 shrink-0 font-mono text-[11px] uppercase tracking-wider text-white/35">
