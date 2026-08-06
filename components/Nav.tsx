@@ -3,6 +3,11 @@
 import { useEffect, useState } from "react";
 import { projects } from "@/lib/projects";
 
+const NAV_ITEMS = [
+  { slug: "experience", name: "Experience" },
+  ...projects.map((p) => ({ slug: p.slug, name: p.name })),
+];
+
 export default function Nav() {
   const [progress, setProgress] = useState(0);
   const [lifted, setLifted] = useState(false);
@@ -28,8 +33,7 @@ export default function Nav() {
   }, []);
 
   useEffect(() => {
-    const sections = projects
-      .map((p) => document.getElementById(p.slug))
+    const sections = NAV_ITEMS.map((item) => document.getElementById(item.slug))
       .filter((el): el is HTMLElement => el !== null);
 
     const observer = new IntersectionObserver(
@@ -70,8 +74,8 @@ export default function Nav() {
             saba<span className="text-white/35">.k</span>
           </a>
 
-          <ul className="hidden items-center gap-1 md:flex">
-            {projects.map((p) => (
+          <ul className="hidden items-center gap-1 lg:flex">
+            {NAV_ITEMS.map((p) => (
               <li key={p.slug}>
                 <a
                   href={`#${p.slug}`}

@@ -25,9 +25,10 @@ export default function About() {
         <div className="mt-8 grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
           <Reveal from="left" delay={80}>
             <p className="text-xl leading-relaxed text-white/80 sm:text-2xl">
-              Computer Science student working mainly on backend systems: APIs,
-              scheduled jobs, and data pipelines, with Next.js front ends where a
-              project needs one.
+              B.S. Computer Science at NYIT, graduating May 2028, and Vice
+              President of the AI Club. I work mainly on backend systems — APIs,
+              scheduled jobs, and data pipelines — with Next.js front ends where
+              a project needs one.
             </p>
             <p className="mt-6 max-w-xl leading-relaxed text-white/55">
               Each project listed here started as a problem I ran into —

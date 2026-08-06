@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-3 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
             <span className="text-xs text-white/70">
-              Looking for Summer 2027 software engineering internships
+              SWE intern at Hearst Magazines · open to Summer 2027 internships
             </span>
           </div>
 
@@ -25,21 +25,22 @@ export default function Hero() {
             Saba Karazanashvili
           </h1>
           <p className="mt-3 text-xl text-white/70">
-            Computer Science student. Backend and full-stack development.
+            Computer Science at NYIT. Backend and full-stack development.
           </p>
 
           <p className="mt-6 max-w-xl leading-relaxed text-white/55">
-            Six projects are listed below — what each one does, why it exists,
-            and what it is built with. All six are on GitHub; three are
+            Currently a software engineering intern at Hearst Magazines. Below:
+            two roles and six projects — what each one does, why it exists, and
+            what it is built with. All six projects are on GitHub; three are
             deployed and linked.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href="#streamclip"
+              href="#experience"
               className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-transform duration-300 hover:scale-[1.03]"
             >
-              Projects
+              Experience &amp; projects
             </a>
             <a
               href="/resume.pdf"
@@ -76,6 +77,7 @@ export default function Hero() {
 
               <dl className="mt-7 space-y-3 text-sm">
                 {[
+                  ["Education", "B.S. Computer Science, NYIT — May 2028"],
                   ["Languages", "Java, Python, TypeScript, JavaScript"],
                   ["Backend", "Spring Boot, Node.js, REST, OAuth"],
                   ["Frontend", "React, Next.js, Tailwind CSS"],
