@@ -15,13 +15,13 @@ export type Project = {
   description: string;
   /** Why the project exists. */
   context: string;
-  /** How it works, or a notable implementation detail. */
-  detail: string;
+  /** Concrete points about what it does and how it is built. */
+  bullets: string[];
   tech: string[];
   /** Hex color used for glow, chips, and section accents. */
   accent: string;
   links: ProjectLink[];
   stats: ProjectStat[];
-  /** Optional path under /public — overrides the generated artwork. */
+  /** Screenshot under /public. Projects without a public UI have none. */
   image?: string;
 };
