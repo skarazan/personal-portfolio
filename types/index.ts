@@ -17,7 +17,8 @@ export type Project = {
   context: string;
   /** Concrete points about what it does and how it is built. */
   bullets: string[];
-  tech: string[];
+  /** Full stack, grouped by role in the system. */
+  stack: { group: string; items: string[] }[];
   /** Hex color used for glow, chips, and section accents. */
   accent: string;
   links: ProjectLink[];

@@ -142,20 +142,35 @@ export default function ProjectSection({ project, index }: Props) {
             </ul>
 
             {/* Stack */}
-            <div className="mt-8 flex flex-wrap items-baseline gap-x-4 gap-y-3 border-t border-white/10 pt-6">
+            <div className="mt-8 border-t border-white/10 pt-6">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">
                 Stack
               </p>
-              <ul className="flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-xs text-white/60"
+
+              <dl className="mt-4 space-y-3">
+                {project.stack.map((group) => (
+                  <div
+                    key={group.group}
+                    className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-4"
                   >
-                    {tech}
-                  </li>
+                    <dt className="w-32 shrink-0 font-mono text-[11px] uppercase tracking-wider text-white/35">
+                      {group.group}
+                    </dt>
+                    <dd>
+                      <ul className="flex flex-wrap gap-2">
+                        {group.items.map((item) => (
+                          <li
+                            key={item}
+                            className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-xs text-white/60"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </dd>
+                  </div>
                 ))}
-              </ul>
+              </dl>
             </div>
           </div>
         </article>
