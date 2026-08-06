@@ -13,7 +13,10 @@ export const projects: Project[] = [
       "Manual clipping means scrubbing hours of VOD, and existing auto-clippers cut moments that have no setup or payoff.",
     detail:
       "Each run writes a selection manifest recording why every candidate was accepted or rejected. The worker and the web service deploy separately and communicate through a documented Supabase and R2 contract.",
-    links: [{ label: "GitHub", href: "https://github.com/skarazan/streamclip" }],
+    links: [
+      { label: "Live site", href: "https://streamclip-alpha.vercel.app" },
+      { label: "GitHub", href: "https://github.com/skarazan/streamclip" },
+    ],
     stats: [
       { value: "9:16", label: "render format" },
       { value: "1–8", label: "clips per run" },
@@ -33,7 +36,7 @@ export const projects: Project[] = [
       "Users authenticate through OAuth or email, post reviews tied to their account, and browse tutorials by rating.",
     links: [
       { label: "Live site", href: "https://tutorrev.onrender.com" },
-      { label: "GitHub", href: "https://github.com/skarazan" },
+      { label: "GitHub", href: "https://github.com/skarazan/TutorRev" },
     ],
     stats: [
       { value: "Spring", label: "Boot REST API" },
@@ -72,7 +75,7 @@ export const projects: Project[] = [
       "Every string field is validated and sanitized with Zod before it reaches the database, user IDs always come from the session rather than the request body, admin routes check role server-side, and API errors are logged in full server-side while returning a generic message to the client.",
     links: [
       { label: "Live site", href: "https://questions-tn0q.onrender.com" },
-      { label: "GitHub", href: "https://github.com/skarazan" },
+      { label: "GitHub", href: "https://github.com/skarazan/QuestionS" },
     ],
     stats: [
       { value: "OAuth", label: "Google sign-in" },
@@ -109,7 +112,12 @@ export const projects: Project[] = [
       "Activity spread across several wallets makes cost basis impractical to reconstruct by hand.",
     detail:
       "Handles transfers between the owner's own wallets so they are not counted as disposals.",
-    links: [{ label: "GitHub", href: "https://github.com/skarazan" }],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/skarazan/solana-multi-wallet-tax-engine",
+      },
+    ],
     stats: [
       { value: "Multi", label: "wallet cost basis" },
       { value: "CSV", label: "output" },

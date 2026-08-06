@@ -30,8 +30,8 @@ export default function Hero() {
 
           <p className="mt-6 max-w-xl leading-relaxed text-white/55">
             Six projects are listed below — what each one does, why it exists,
-            and what it is built with. Most are on GitHub; three are deployed
-            and reachable.
+            and what it is built with. All six are on GitHub; three are
+            deployed and linked.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
